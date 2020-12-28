@@ -1,2 +1,7 @@
+include ':domain'
+include ':resources:'
+include ':data:'
+include ':api:'
+include ':core:'
 include ':app'
 rootProject.name = "Template Application"
