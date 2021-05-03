@@ -68,6 +68,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
 
+    implementation "com.jakewharton.timber:timber:$timber"
+
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 
     implementation "com.google.dagger:dagger:$dagger"
