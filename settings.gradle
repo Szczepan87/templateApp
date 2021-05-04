@@ -1,3 +1,4 @@
+include ':featureGetJoke'
 include ':domain'
 include ':resources:'
 include ':data:'
