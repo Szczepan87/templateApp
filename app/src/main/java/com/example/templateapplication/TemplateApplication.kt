@@ -19,8 +19,9 @@ class TemplateApplication : Application() {
     }
 
     private fun initInjector() {
-        ApplicationInjector.init(
-            DaggerApplicationComponent.factory().application(applicationContext)
-        )
+        DaggerApplicationComponent.factory().application(applicationContext).let{
+            ApplicationInjector.init(it)
+            it.inject(this)
+        }
     }
 }

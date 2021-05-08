@@ -5,6 +5,7 @@ import com.example.api.di.ApiModule
 import com.example.core.di.CoreModule
 import com.example.data.di.DataModule
 import com.example.domain.di.DomainModule
+import com.example.templateapplication.TemplateApplication
 import com.example.templateapplication.di.main.MainComponent
 import dagger.BindsInstance
 import dagger.Component
@@ -21,6 +22,7 @@ import javax.inject.Singleton
     ]
 )
 interface ApplicationComponent {
+    fun inject(app: TemplateApplication)
 
     fun mainComponent(): MainComponent.Factory
 
