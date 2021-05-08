@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.core.ui
 
 import android.app.Activity
 import android.content.pm.ActivityInfo
