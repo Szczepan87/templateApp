@@ -17,7 +17,7 @@ object ApplicationInjector :
     private var displayJokeComponent: DisplayJokeComponent? = null
 
     fun init(appComponent: ApplicationComponent) {
-        ApplicationInjector.appComponent = appComponent
+        this.appComponent = appComponent
     }
 
     override fun provideMainComponent(activity: AppCompatActivity): MainComponent {
