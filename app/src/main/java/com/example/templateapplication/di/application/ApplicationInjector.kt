@@ -11,7 +11,7 @@ object ApplicationInjector : MainComponentProvider {
     private var mainComponent: MainComponent? = null
 
     fun init(appComponent: ApplicationComponent) {
-        ApplicationInjector.appComponent = appComponent
+        this.appComponent = appComponent
     }
 
     override fun provideMainComponent(activity: AppCompatActivity): MainComponent {

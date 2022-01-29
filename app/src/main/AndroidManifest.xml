@@ -3,6 +3,7 @@
     package="com.example.templateapplication">
 
     <application
+        android:name=".TemplateApplication"
         android:allowBackup="true"
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"

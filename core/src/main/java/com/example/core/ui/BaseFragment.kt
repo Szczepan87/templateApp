@@ -10,6 +10,8 @@ import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.navigation.Navigator
 
 abstract class BaseFragment<TViewBinding : ViewDataBinding> : Fragment() {
 
@@ -18,6 +20,8 @@ abstract class BaseFragment<TViewBinding : ViewDataBinding> : Fragment() {
         get() = _binding ?: throw IllegalStateException()
 
     abstract val layoutId: Int
+
+    protected lateinit var navigator: Navigator
 
     protected val baseActivity: BaseActivity<*>
         get() = activity as BaseActivity<*>
@@ -34,6 +38,7 @@ abstract class BaseFragment<TViewBinding : ViewDataBinding> : Fragment() {
 
         _binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
+        navigator = Navigator(findNavController())
         return binding.root
     }
 
