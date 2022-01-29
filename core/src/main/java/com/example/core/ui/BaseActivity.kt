@@ -16,6 +16,7 @@ abstract class BaseActivity<TViewBinding : ViewDataBinding> : AppCompatActivity(
         binding = DataBindingUtil.setContentView(this, layoutId)
         binding.lifecycleOwner = this
     }
+
     fun setActionBar(toolbar: Toolbar) = setSupportActionBar(toolbar)
 
     fun setHomeIndicatorEnabled(show: Boolean) = supportActionBar?.setDisplayHomeAsUpEnabled(show)
