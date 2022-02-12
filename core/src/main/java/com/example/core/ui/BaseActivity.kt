@@ -15,6 +15,7 @@ abstract class BaseActivity<TViewBinding : ViewDataBinding> : AppCompatActivity(
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, layoutId)
         binding.lifecycleOwner = this
+//        val navController = findNavController(R.id.)
     }
 
     fun setActionBar(toolbar: Toolbar) = setSupportActionBar(toolbar)
